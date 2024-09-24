@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans antialiased bg-gray-50 text-gray-800">
+    <header class="w-full px-6 h-[70px] flex items-center justify-between border-b-2 bg-white shadow-md">
+        <h4 class="text-3xl font-bold cursor-pointer">Srishti</h4>
+
+        <!-- Hamburger Icon (Visible on Mobile) -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-3xl focus:outline-none">
+                &#9776; <!-- Unicode for hamburger menu -->
+            </button>
+        </div>
+
+        <!-- Fullscreen Navigation Menu (hidden by default) -->
+        <nav id="menu"
+            class="fixed inset-0 bg-black bg-opacity-90 md:text-black text-white flex flex-col items-center justify-center space-y-6 text-xl hidden md:flex md:static md:bg-transparent md:space-y-0 md:flex-row md:items-center">
+
+            <!-- Close Button (Visible on Mobile) -->
+            <button id="menu-close" class="absolute top-4 right-4 text-4xl focus:outline-none md:hidden">
+                &times; <!-- Unicode for close (×) -->
+            </button>
+
+            <a class="hover:text-blue-500 transition px-4" href="/">Home</a>
+            <a class="hover:text-blue-500 transition px-4" href="/about">About</a>
+            <a class="hover:text-blue-500 transition px-4" href="/contact">Contact</a>
+            <a class="hover:text-blue-500 transition px-4" href="/login">Login</a>
+        </nav>
+    </header>
+
+    <body>
